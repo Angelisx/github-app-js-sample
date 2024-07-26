@@ -1,0 +1,22 @@
+timestamp: 2024-07-26T09:36:39.285404
+process title: pantsd [/Users/angel/Documents/GitHub/github-app-js-sample]
+sys.argv: ['/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/bin/pants']
+pid: 68020
+Signal 15 (SIGTERM) was raised. Exiting with failure.
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/bin/pants", line 14, in <module>
+    sys.exit(entry_point())
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/lib/python3.9/site-packages/pants/bin/pants_loader.py", line 112, in main
+    PantsLoader.main()
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/lib/python3.9/site-packages/pants/bin/pants_loader.py", line 106, in main
+    cls.run_alternate_entrypoint(entrypoint)
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/lib/python3.9/site-packages/pants/bin/pants_loader.py", line 84, in run_alternate_entrypoint
+    entrypoint_fn()
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/lib/python3.9/site-packages/pants/pantsd/pants_daemon.py", line 238, in launch_new_pantsd_instance
+    daemon.run_sync()
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/lib/python3.9/site-packages/pants/pantsd/pants_daemon.py", line 211, in run_sync
+    time.sleep(self.JOIN_TIMEOUT_SECONDS)
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/lib/python3.9/site-packages/pants/base/exception_sink.py", line 109, in handle_sigterm
+    raise self.SignalHandledNonLocalExit(signum, "SIGTERM")
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/lib/python3.9/site-packages/pants/base/exception_sink.py", line 94, in __init__
+    self.traceback_lines = traceback.format_stack()
+

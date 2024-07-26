@@ -1,0 +1,47 @@
+09:31:05.30 [INFO] pantsd 2.21.0 running with PID: 68020
+09:31:05.39 [INFO] handling request: ``
+09:31:05.70 [INFO] request completed: ``
+09:31:59.54 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"my-first-app/index.js"}
+09:31:59.54 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"my-first-app/index.js"}
+09:32:04.42 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"my-first-app/index.js"}
+09:32:04.42 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"my-first-app/index.js"}
+09:32:25.64 [INFO] Extending leases
+09:32:25.65 [INFO] Done extending leases
+09:32:59.54 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"my-first-app/index.js"}
+09:32:59.54 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"my-first-app/index.js"}
+09:33:17.55 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"my-first-app/index.js"}
+09:33:17.55 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"my-first-app/index.js"}
+09:33:19.46 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"my-first-app/index.js"}
+09:33:19.46 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"my-first-app/index.js"}
+09:33:45.68 [INFO] Extending leases
+09:33:45.68 [INFO] Done extending leases
+09:34:03.57 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"my-first-app/index.js"}
+09:34:03.57 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"my-first-app/index.js"}
+09:35:05.71 [INFO] Extending leases
+09:35:05.72 [INFO] Done extending leases
+09:36:25.75 [INFO] Extending leases
+09:36:25.75 [INFO] Done extending leases
+Signal 15 (SIGTERM) was raised. Exiting with failure.
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/bin/pants", line 14, in <module>
+    sys.exit(entry_point())
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/lib/python3.9/site-packages/pants/bin/pants_loader.py", line 112, in main
+    PantsLoader.main()
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/lib/python3.9/site-packages/pants/bin/pants_loader.py", line 106, in main
+    cls.run_alternate_entrypoint(entrypoint)
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/lib/python3.9/site-packages/pants/bin/pants_loader.py", line 84, in run_alternate_entrypoint
+    entrypoint_fn()
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/lib/python3.9/site-packages/pants/pantsd/pants_daemon.py", line 238, in launch_new_pantsd_instance
+    daemon.run_sync()
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/lib/python3.9/site-packages/pants/pantsd/pants_daemon.py", line 211, in run_sync
+    time.sleep(self.JOIN_TIMEOUT_SECONDS)
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/lib/python3.9/site-packages/pants/base/exception_sink.py", line 109, in handle_sigterm
+    raise self.SignalHandledNonLocalExit(signum, "SIGTERM")
+  File "/Users/angel/Library/Caches/nce/6faa4322d1df41d032e4938795c6f2c262ab92bb642a9bac1101cb7d1631f9c1/bindings/venvs/2.21.0/lib/python3.9/site-packages/pants/base/exception_sink.py", line 94, in __init__
+    self.traceback_lines = traceback.format_stack()
+
+09:36:39.31 [WARN] Executor was not shut down explicitly.
+09:36:39.31 [ERROR] panic at 'Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.', /Users/gha/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.32.0/src/runtime/blocking/shutdown.rs:51
+09:36:39.31 [ERROR] Please set RUST_BACKTRACE=1, re-run, and then file a bug at https://github.com/pantsbuild/pants/issues.
+09:36:39.31 [ERROR] panic at 'A Tokio 1.x context was found, but it is being shutdown.', /Users/gha/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.32.0/src/runtime/time/entry.rs:557
+09:36:39.31 [ERROR] Please set RUST_BACKTRACE=1, re-run, and then file a bug at https://github.com/pantsbuild/pants/issues.
+09:36:39.38 [WARN] File watcher exiting with: The watcher was shut down.
