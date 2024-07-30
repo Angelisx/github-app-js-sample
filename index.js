@@ -29,17 +29,6 @@ export default (app) => {
     //const pythonPath = '.venv/bin/python3.9';
     //const command = `${pythonPath} pants dependees baseimages/python/3-10-slim-bullseye:3.10-slim-bullseye`;
     // Command to run pants with the specific Python virtual environment
-    
-    try {
-      const { stdout, stderr } = await new Promise((resolve, reject) => {
-        exec(command, (error, stdout, stderr) => {
-          if (error) {
-            reject({ error, stderr });
-            return;
-          }
-          resolve({ stdout, stderr });
-        });
-      });
 
       let headBranch, headSha;
       if (context.payload.check_suite) {
