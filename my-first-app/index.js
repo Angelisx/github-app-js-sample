@@ -52,7 +52,7 @@ export default (app) => {
         headBranch = context.payload.pull_request.head.ref;
         headSha = context.payload.pull_request.head.sha;
       }
-      
+
       // Create the check with the command output
       return context.octokit.checks.create(
         context.repo({
@@ -87,16 +87,17 @@ export default (app) => {
         }),
       );
 
+      // run pants
       async function runTwistlockScan() {
         const command = "twistloc {path}"; 
         return runCommand(command);
       }
-    
+      // run twistloc
       async function runPantsScript() {
         const command = "pants {path}"; 
         return runCommand(command);
       }
-    
+      // the runner
       async function runCommand(command) {
         return new Promise((resolve, reject) => {
           exec(command, (error, stdout, stderr) => {
@@ -108,11 +109,11 @@ export default (app) => {
           });
         });
       }
-    
+      // pass/fail CRITERIA
       function parseTwistlockOutput(output) {
         return !output.includes("critical") && !output.includes("high");
       }
-    
+      // The output
       function formatOutputs(twistlockOutput, pantsOutput) {
         return `
           ## Twistlock Scan Results
